@@ -1,0 +1,11 @@
+web:
+  build: .
+  volumes:
+    - .:/files
+test:
+  build: .
+  links:
+    - web:web
+  volumes:
+    - .:/files
+  command: nosetests /files
