@@ -2,7 +2,8 @@
 
 First, write a python function that accepts as an argument a list of integers.  It must
 find in that list all runs of 3 consecutive numbers that increase or decrease by 1.  It
-should return the list indices of the first element of each run.
+should return the list indices of the first element of each run.  If there are no consecutive
+runs, this should return None
 
 Example:  [1, 2, 3, 5, 10, 9, 8, 9, 10, 11, 7, 8, 7] would return [0, 4, 6, 7]
 
