@@ -11,7 +11,7 @@ def return_consecutive_runs():
 
     try:
         data = json.loads(request.data)
-        provided = data['list']
+        provided = json.loads(data['list'])
     except:
         return 'no list was provided'
     output = find_consecutive_runs(provided) or []
