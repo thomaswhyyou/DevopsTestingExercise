@@ -1,6 +1,9 @@
 from unittest import TestCase
 
+from flask import Flask
+
 import find_consecutive_runs as fcr
+
 
 class TestFindConsecutiveRuns(TestCase):
 
@@ -38,3 +41,7 @@ class TestFindConsecutiveRuns(TestCase):
         self.assertEqual(type(result), list)
         self.assertEqual(result, [0, 4, 6, 7])
 
+    def test_flask_app_get(self):
+        app = fcr.app.test_client()
+        res = app.get("/").data
+        self.assertEqual(res, "no list was provided")
